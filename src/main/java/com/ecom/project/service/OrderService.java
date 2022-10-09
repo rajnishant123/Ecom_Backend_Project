@@ -1,0 +1,24 @@
+package com.ecom.project.service;
+
+import java.util.List;
+
+import com.ecom.project.payload.OrderDto;
+import com.ecom.project.payload.OrderRequest;
+
+public interface OrderService {
+	// create order
+
+		OrderDto createOrder(OrderRequest request, String username);
+
+		// update order
+		OrderDto updateOrder(OrderDto orderDto, int orderId);
+
+		// delete order
+		void deleteOrder(int orderId);
+
+		// get all orders
+		List<OrderDto> getAll();
+
+		// get single order
+		OrderDto get(int orderId);
+}
